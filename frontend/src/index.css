@@ -1,0 +1,157 @@
+/* Add any global styles here if necessary, but most styling is handled by index.css and component-specific CSS */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+/* Basic Resets & Global Styles */
+body {
+  font-family: 'Inter', sans-serif; /* Using Inter as a clean sans-serif font */
+  color: var(--text-general);
+  background-color: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Professional Color Scheme - Birth Certificate Portal (Updated) */
+:root {
+  --background: #F3F4F6; /* Light Gray for smooth contrast */
+  --navbar-bg: #2563EB; /* Primary Blue */
+  --navbar-text: #FFFFFF;
+
+  --primary-button: #2563EB; /* Primary Blue for main actions */
+  --primary-button-rgb: 37, 99, 235; /* RGB values for primary button color */
+  --primary-button-hover: #1D4ED8; /* Darker blue on hover */
+  --primary-button-text: #FFFFFF;
+
+  --secondary-button: #10B981; /* Secondary Green for success/verified */
+  --secondary-button-hover: #059669; /* Darker green on hover */
+  --secondary-button-text: #FFFFFF; /* White text for secondary buttons */
+
+  --accent-color: #F59E0B; /* Amber for highlights and hover effects */
+  --accent-color-hover: #D97706; /* Darker amber on hover */
+
+  --text-general: #374151; /* Darker gray for general text */
+  --headings: #1F2937; /* Even darker gray for headings */
+  --text-muted: #6B7280; /* Medium gray for muted text */
+
+  --borders-cards: #E5E7EB; /* Light gray for borders and cards */
+  --background-alt: #E5E7EB; /* Consistent with borders/cards for alt backgrounds */
+
+  --alerts-error: #EF4444; /* Red for errors */
+  --alerts-error-subtle: #FEE2E2; /* Light red for error backgrounds */
+  --success-confirm: #10B981; /* Green for success */
+  --success-subtle: #D1FAE5; /* Light green for success backgrounds */
+  --warning: #F59E0B; /* Amber for warnings (matching accent) */
+  --warning-subtle: #FFFBEB; /* Light amber for warning backgrounds */
+  --info: #3B82F6; /* Info blue */
+  --info-subtle: #DBEAFE; /* Light blue for info backgrounds */
+
+  --white: #FFFFFF; /* Pure white */
+  --black: #000000; /* Pure black */
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Custom shadow for hover effect */
+  --shadow-hover: 0 15px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Certificate Theme Variables */
+  --certificate-border-color: var(--primary-button); /* Default certificate border color */
+  --certificate-border-style: dashed; /* Default border style */
+  --certificate-border-thickness: 2px; /* Default border thickness */
+  --certificate-bg-pattern: linear-gradient(135deg, rgba(var(--primary-button-rgb), 0.05) 25%, transparent 25%, transparent 50%, rgba(var(--primary-button-rgb), 0.05) 50%, rgba(var(--primary-button-rgb), 0.05) 75%, transparent 75%, transparent); /* Subtle background pattern */
+  --certificate-bg-pattern-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--headings);
+  font-weight: 700; /* Assuming bold for headings */
+}
+
+h1 { font-size: 2.5rem; } /* Example: 40px */
+h2 { font-size: 2rem; }   /* Example: 32px */
+h3 { font-size: 1.75rem; } /* Example: 28px */
+h4 { font-size: 1.5rem; } /* Example: 24px */
+h5 { font-size: 1.25rem; } /* Example: 20px */
+h6 { font-size: 1rem; }   /* Example: 16px */
+
+.text-serif {
+  font-family: 'Merriweather', serif;
+}
+
+/* Custom hover utility classes for new theme */
+.hover-bg-accent-color:hover {
+  background-color: var(--accent-color-hover) !important;
+}
+.hover-text-accent-color:hover {
+  color: var(--accent-color-hover) !important;
+}
+
+/* Custom Bootstrap-like utility classes for theme colors */
+.bg-primary-button-subtle {
+  background-color: var(--info-subtle) !important; /* Using info-subtle for primary-button-subtle as primary is strong */
+}
+.text-primary-button {
+  color: var(--primary-button) !important;
+}
+
+.bg-secondary-button-subtle {
+  background-color: var(--secondary-button-hover) !important;
+}
+.text-secondary-button-text {
+  color: var(--secondary-button-text) !important;
+}
+
+.bg-warning-subtle {
+  background-color: var(--warning-subtle) !important;
+}
+.text-warning {
+  color: var(--warning) !important;
+}
+
+.bg-success-subtle {
+  background-color: var(--success-subtle) !important;
+}
+.text-success-confirm {
+  color: var(--success-confirm) !important;
+}
+
+.bg-alerts-error-subtle {
+  background-color: var(--alerts-error-subtle) !important;
+}
+.text-alerts-error {
+  color: var(--alerts-error) !important;
+}
+
+.bg-info-subtle {
+  background-color: var(--info-subtle) !important;
+}
+.text-info {
+  color: var(--info) !important;
+}
+
+.text-headings {
+  color: var(--headings) !important;
+}
+.text-text-general {
+  color: var(--text-general) !important;
+}
+.border-borders-cards {
+  border-color: var(--borders-cards) !important;
+}
+
+.form-group-inline .form-label {
+  flex: 0 0 auto;
+  padding-right: 1rem;
+}
+
+.form-group-inline .form-control,
+.form-group-inline .input-group {
+  flex: 1 1 auto;
+}
+
+.card-hover-shadow:hover {
+  box-shadow: var(--shadow-hover) !important;
+  transition: box-shadow 0.3s ease-in-out;
+}

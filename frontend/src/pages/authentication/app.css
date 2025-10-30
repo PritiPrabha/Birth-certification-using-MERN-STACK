@@ -1,0 +1,248 @@
+/* app.css — project-wide consistent design
+   Works with Bootstrap 5 and your existing components
+*/
+
+/* Root variables */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary: #6c757d;
+    --success: #198754;
+    --warning: #f59e0b;
+    --danger: #dc3545;
+    --info: #0dcaf0;
+  
+    --text-general: #2c2c2c;
+    --text-muted: #6b7280;
+    --headings: #111827;
+  
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e5e7eb;
+  }
+  
+  /* Global Reset */
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    background-color: var(--bg-body);
+    color: var(--text-general);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* ------------------------------
+     Common Card & Layout Styling
+  ------------------------------ */
+  .card {
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    background-color: var(--bg-card);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  }
+  
+  .card-header {
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 1rem 1rem 0 0 !important;
+  }
+  
+  /* ------------------------------
+     Buttons
+  ------------------------------ */
+  .btn-primary-button {
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  .btn-primary-button:hover {
+    background: var(--primary-dark);
+    transform: scale(1.02);
+  }
+  
+  .btn-secondary-button {
+    background: var(--secondary);
+    border: none;
+    color: white;
+  }
+  .btn-secondary-button:hover {
+    background: #5c636a;
+  }
+  
+  .btn-outline-primary-button {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+  }
+  .btn-outline-primary-button:hover {
+    background: var(--primary);
+    color: white;
+  }
+  
+  /* ------------------------------
+     Typography
+  ------------------------------ */
+  .text-headings {
+    color: var(--headings);
+    font-weight: 600;
+  }
+  .text-text-general {
+    color: var(--text-general);
+  }
+  .text-muted {
+    color: var(--text-muted) !important;
+  }
+  
+  /* ------------------------------
+     Badges
+  ------------------------------ */
+  .badge {
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 0.5em 0.8em;
+  }
+  
+  .bg-success-subtle {
+    background: rgba(25, 135, 84, 0.1);
+    color: var(--success);
+  }
+  .bg-warning-subtle {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+  }
+  .bg-danger-subtle {
+    background: rgba(220, 53, 69, 0.1);
+    color: var(--danger);
+  }
+  .bg-info-subtle {
+    background: rgba(13, 202, 240, 0.1);
+    color: var(--info);
+  }
+  
+  /* ------------------------------
+     Forms & Inputs
+  ------------------------------ */
+  .form-control {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background: #fff;
+  }
+  .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+    border-color: var(--primary);
+  }
+  
+  /* ------------------------------
+     Modal Enhancements
+  ------------------------------ */
+  .modal-content {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .modal-header {
+    background-color: var(--primary);
+    color: white;
+    border-bottom: none;
+  }
+  .modal-header .btn-close {
+    filter: invert(1);
+  }
+  .modal-body {
+    background-color: var(--bg-body);
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  
+  /* ------------------------------
+     Utility Classes
+  ------------------------------ */
+  .border-borders-cards {
+    border-color: var(--border-color) !important;
+  }
+  .text-primary-button {
+    color: var(--primary) !important;
+  }
+  .text-success-confirm {
+    color: var(--success) !important;
+  }
+  .text-alerts-error {
+    color: var(--danger) !important;
+  }
+  
+  /* ------------------------------
+     Animation helpers
+  ------------------------------ */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ------------------------------
+     Auth (Login / Register) Forms
+  ------------------------------ */
+  .auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+  }
+  .auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 420px;
+  }
+  .auth-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--headings);
+  }
+  .auth-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  /* ------------------------------
+     Chart container styles
+  ------------------------------ */
+  .chart-container {
+    background: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+  }
+  
+  /* ------------------------------
+     List / Table Adjustments
+  ------------------------------ */
+  .list-group-item {
+    background: white;
+    border-color: var(--border-color);
+  }
+  
+  /* ------------------------------
+     Hover Helpers
+  ------------------------------ */
+  .hover-bg-accent-color:hover {
+    background-color: var(--primary);
+    color: white !important;
+  }
+  .hover-text-white:hover {
+    color: white !important;
+  }
+  

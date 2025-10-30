@@ -1,0 +1,105 @@
+.button-variant-default {
+  background-color: var(--primary-button);
+  color: var(--primary-button-text);
+  border-color: var(--primary-button);
+  transition: all 0.2s ease-in-out;
+}
+
+.button-variant-default:hover {
+  background-color: var(--primary-button-hover);
+  border-color: var(--primary-button-hover);
+  color: var(--primary-button-text);
+}
+
+.button-variant-destructive {
+  background-color: var(--alerts-error);
+  color: var(--error-foreground);
+  border-color: var(--alerts-error);
+}
+
+.button-variant-destructive:hover {
+  background-color: var(--error-hover);
+  border-color: var(--error-hover);
+  color: var(--error-foreground);
+}
+
+.button-variant-outline {
+  background-color: transparent;
+  color: var(--primary-button);
+  border: 1px solid var(--primary-button);
+}
+
+.button-variant-outline:hover {
+  background-color: var(--primary-button);
+  color: var(--primary-button-text);
+  border-color: var(--primary-button);
+}
+
+.button-variant-secondary {
+  background-color: var(--secondary-button);
+  color: var(--secondary-button-text);
+  border-color: var(--secondary-button);
+}
+
+.button-variant-secondary:hover {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+  color: var(--secondary-button-text);
+}
+
+.button-variant-ghost {
+  background-color: transparent;
+  color: var(--text-general);
+  border-color: transparent;
+}
+
+.button-variant-ghost:hover {
+  background-color: var(--borders-cards);
+}
+
+.button-variant-link {
+  background-color: transparent;
+  color: var(--primary-button);
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+.button-variant-link:hover {
+  color: var(--primary-button-hover);
+}
+
+.btn-icon {
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-md {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+}
+
+.btn-icon.btn-sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem;
+}
+
+.btn-icon.btn-lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+}

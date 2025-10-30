@@ -1,0 +1,46 @@
+.navbar {
+  background-color: var(--navbar-bg); /* Deep Blue / Navy */
+  padding: 1rem 0;
+  box-shadow: var(--shadow-sm); /* Subtle shadow */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Or your preferred container width */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-brand {
+  color: var(--navbar-text); /* White text */
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: var(--navbar-text);
+}
+
+.navbar-links .navbar-link {
+  color: var(--navbar-text); /* White text */
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-links .navbar-link:hover {
+  color: rgba(255, 255, 255, 0.8); /* Slightly lighter on hover */
+}
+
+.card-hover {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
